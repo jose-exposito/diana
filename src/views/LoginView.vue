@@ -10,10 +10,10 @@
 
         <div>
             <label for="email1" class="block text-900 font-medium mb-2">Email</label>
-            <InputText id="email1" type="text" placeholder="Correo electrónico" class="w-full mb-3" />
+            <InputText v-model="email" id="email1" type="text" placeholder="Correo electrónico" class="w-full mb-3" />
 
             <label for="password1" class="block text-900 font-medium mb-2">Contraseña</label>
-            <InputText id="password1" type="password" placeholder="Contraseña" class="w-full mb-3" />
+            <InputText v-model='password' id="password1" type="password" placeholder="Contraseña" class="w-full mb-3" />
 
             <div class="flex align-items-center justify-content-between mb-6">
                 <div class="flex align-items-center">
@@ -23,15 +23,32 @@
                 <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">He olvidado mi contraseña</a>
             </div>
 
-            <Button label="Iniciar sesión" icon="pi pi-user" class="w-full"></Button>
+            <Button @click="login" label="Iniciar sesión" icon="pi pi-user" class="w-full"></Button>
         </div>
     </div>
 
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
+import { useAuthStore } from '../store/auth'
 
 const checked1 = true
+
+const store = useAuthStore();
+
+const email = ref('');
+const password = ref('');
+const rememberMe = ref(false);
+
+const login = async () => {
+    try {
+        let response = await store.login({email: email.value}, {password: password.value});
+        console.log(response)
+    } catch (error) {
+        console.error('Error al iniciar sesión:');
+    }
+}
 
 </script>
 
