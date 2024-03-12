@@ -39,7 +39,7 @@
                     <div class="w-full lg:w-6 p-4 lg:p-7" style="background-color: rgba(255,255,255,.7);">
                         <img class="mb-6" src="../assets/images/logos/hyper.svg" alt="Image" height="50"/>
                         <div class="text-xl text-900 font-500 mb-3"> Wellcome to bastion </div>
-                        <p clas="text-600 line-height-3 mt-0 mb-6">Quis vel eros donec ac odio tempor orci dapibus. In hac habitasse platea dictumst quisque.</p>
+                        <p class="text-600 line-height-3 mt-0 mb-6">Quis vel eros donec ac odio tempor orci dapibus. In hac habitasse platea dictumst quisque.</p>
                         <ul class="list-none p-0 m-0">
                             <li class="flex align-items-start mb-4">
                                 <div>
