@@ -8,15 +8,16 @@ export const useAuthStore = defineStore({
         isLoading: false
     }),
     actions:{
-        async login(username, password){
+        async login(email:string, password:string): Promise<void>
+        {
             try{
                 this.isLoading = true
-                const response = await fetch('/api/login_check', {
+                const response = await fetch('http://127.0.0.1:8000/api/login_check', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({username, password}),
+                    body: JSON.stringify({email, password}),
                 });
 
                 if(!response.ok){

@@ -42,9 +42,13 @@ const password = ref('');
 const rememberMe = ref(false);
 
 const login = async () => {
+
+    console.log('El email es: ')
+    console.log(email.value)
+
     try {
-        let response = await store.login({email: email.value}, {password: password.value});
-        console.log(response)
+        await store.login(email.value, password.value)
+        console.log(store.token)
     } catch (error) {
         console.error('Error al iniciar sesión:');
     }
