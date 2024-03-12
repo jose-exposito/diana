@@ -36,11 +36,13 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router';
 import { useAuthStore } from '../store/auth'
 
 const checked1 = true
 
 const store = useAuthStore();
+const router = useRouter()
 
 const email = ref('');
 const password = ref('');
@@ -54,6 +56,7 @@ const login = async () => {
     try {
         await store.login(email.value, password.value)
         console.log(store.token)
+        await router.push({name: 'DashboardView'});
     } catch (error) {
         console.error('Error al iniciar sesión:');
     }
