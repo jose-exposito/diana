@@ -56,7 +56,7 @@
                             <li class="flex align-items-start mb-4">
                                 <div>
                                     <span class="flex align-items-center justify-content-center bg-purple-400" style="width: 38px; height: 38px; border-radius: 10px;">
-                                        <i class="text-xl text-white pi pi-shield"> <!-- falta el ::before --> </i>
+                                        <i class="text-xl text-white pi pi-shield"> </i>
                                     </span>
                                 </div>
                                 <div class="ml-3">
@@ -68,7 +68,7 @@
                             <li class="flex align-items-start mb-4">
                                 <div>
                                     <span class="flex align-items-center justify-content-center bg-purple-400" style="width: 38px; height: 38px; border-radius: 10px;">
-                                        <i class="text-xl text-white pi pi-globe"> <!-- falta el ::before --> </i>
+                                        <i class="text-xl text-white pi pi-globe">  </i>
                                     </span>
                                 </div>
                                 <div class="ml-3">
